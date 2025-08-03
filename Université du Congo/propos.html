@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universite de la République Démocratique du Congo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+
+
+/* Variables et reset */
+:root {
+    --primary: #070141;
+    --accent: #ff9800;
+    --light: #f8f9fa;
+    --dark: #036363;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+/* Navigation */
+.navbar ul {
+    list-style: none;
+}
+.navbar {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.login-btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,9.7),rgba(4,9,30,0.7)),url(image/hospital.jpg);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+        
+ .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e68a00;
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Sections communes */
+        .section {
+            padding: 4rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+/* A propos */
+.news-section {
+    background-color: #eef2f7;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.news-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+.news-img img{
+    width: 100%;
+    height: 200px;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.news-content h3 {
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+}
+.news-content a{
+    color: #e68a00;
+}
+
+
+        /* Footer */
+        .footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-col h3 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    margin-right: 1rem;
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #bbb;
+}
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background-color: var(--primary);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 4rem 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">       
+            <i class="fas fa-graduation-cap fa-2x"></i>
+            <h1>Université du Congo</h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Programmes</a></li>
+            <li><a href="index.html">Actualités</a></li>
+            <li><a href="index.html">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Bienvenue dans la page A propos de l'UNICO</h2>
+        <p> "Notre devise : Innover, Créee, Réussir !!".</p>
+        <div class="cta-buttons">
+            <a href="index.html" class="btn btn-primary">Découvrir nos programmes</a>
+            <a href="index.html" class="btn btn-secondary">Accès étudiant</a>
+        </div>
+    </section>
+
+<!-- A propos Section -->
+<section class="section section-news" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>A propos de nous</h2>
+        </div>
+        
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="image/accueil.png">
+                </div>
+                <div class="news-content">
+                    
+                    <h3>Historique de l'Université du Congo</h3>
+                    <p>L’Université du Congo (UNICO) a été fondée en 2005 dans le but de répondre aux besoins croissants en formation supérieure de qualité en République Démocratique du Congo. Dès sa création, 
+                        l’université s’est donnée pour mission de former des professionnels compétents dans des domaines stratégiques pour le développement du pays, notamment la médecine, l’informatique et l’architecture.</p>
+                        <div class="news-img">
+                            <img src="image/batiment a.jpg">
+                        </div>      
+                        <p>Au fil des années, l’UNICO a su se développer grâce à un corps professoral engagé et à des infrastructures modernes, favorisant un environnement propice à l’apprentissage et à la recherche. 
+                        Elle a rapidement gagné en reconnaissance nationale et internationale pour la qualité de ses programmes et l’excellence académique de ses diplômés.L’Université du Congo est aujourd’hui un acteur majeur 
+                        de l’éducation supérieure en RDC, animée par des valeurs de rigueur scientifique, d’innovation et d’ouverture sur le monde. Elle continue d’élargir ses offres de formation 
+                        et ses partenariats pour mieux préparer ses étudiants aux défis du XXIe siècle</p>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="image/excellence.jpg">
+                </div>
+                <div class="news-content">
+                    <h3>Excellence Académique</h3>
+                    <p> À l'Université du Congo, l'excellence académique est au cœur de notre engagement. Nous visons à offrir une formation rigoureuse et innovante qui prépare 
+                        nos étudiants à devenir des leaders compétents et responsables dans leurs domaines respectifs.
+                        Grâce à un corps professoral qualifié, des programmes actualisés et des infrastructures modernes,
+                        nous assurons un environnement d'apprentissage stimulant. Notre démarche pédagogique encourage la pensée critique, 
+                        la créativité et la recherche scientifique, afin de former des professionnels aptes à relever les défis locaux et globaux.
+                        <div class="news-img">
+                            <img src="image/grade.jpg">
+                        </div>
+                        L'Université du Congo s'engage à maintenir des standards élevés et à promouvoir une culture d'excellence, favorisant la réussite et l'épanouissement de chaque étudiant.
+                        En se qui concerne l'enseignement, nous disposons de bourses d'études pour les brillants élèves mais également des diplômes internationals que ce soit en licence, masteur ou doctorat
+                        </p>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="image/hospital.jpg">
+                </div>
+                <div class="news-content">
+                    <h3>Nos réalisations</h3>
+                    <p> Depuis sa création, l'Université du Congo a accompli de nombreuses réalisations qui témoignent de son dynamisme et de sa contribution au développement du pays. Parmi celles-ci : <br>
+                        - La mise en place de trois filières majeures : Médecine, Informatique et Architecture, offrant des formations adaptées aux besoins du marché.<br>
+                        - Le développement d'un hôpital universitaire moderne, dédié à la formation pratique des étudiants en médecine et aux soins de qualité pour la communauté.<br>
+                        - L'intégration de technologies innovantes dans les cursus, notamment pour l'informatique et l'architecture, favorisant l’apprentissage numérique et la recherche appliquée.<br>
+                        <div class="news-img">
+                            <img src="image/laboinfo.jpg">
+                        </div>
+                        - L'organisation régulière de conférences, séminaires et projets communautaires, renforçant le lien entre l’université, les étudiants et la société.<br>
+                        Ces succès illustrent notre engagement à faire de l'Université du Congo un pilier de l'éducation supérieure et un acteur clé du progrès social et scientifique.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Universite du Congo</h3>
+                <p>Former des bâtisseurs d'avenir, des soignants de vies et des créateurs du numériques, au service d'un monde durable, innovant et humain.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Programmes</a></li>
+                    <li><a href="index.html">Actualités</a></li>
+                    <li><a href="index.html">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Programmes</h3>
+                <ul class="footer-links">
+                    <li><a href="programme.html">Informatique Appliqué</a></li>
+                    <li><a href="programme.html">Médecine</a></li>
+                    <li><a href="programme.html">Architecture</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Avenue des Ecoles, Quartier Mabanga-Sud, Ville de Goma, Nord-Kivu, RD Congo Kinshasa</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+243 906 461 468 ">+243 906 461 468</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:uivcongo2@gmail.com">uivcongo2@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Universite du Congo/ RDC. @Romain.K.</p>
+        </div>
+    </footer>
+</body>
+</html>

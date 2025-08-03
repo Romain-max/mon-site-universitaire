@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universite de la République Démocratique du Congo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+
+
+/* Variables et reset */
+:root {
+    --primary: #070141;
+    --accent: #ff9800;
+    --light: #f8f9fa;
+    --dark: #036363;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+/* Navigation */
+.navbar ul {
+    list-style: none;
+}
+.navbar {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.login-btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,9.7),rgba(4,9,30,0.7)),url(image/accueil.png);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+        
+ .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e68a00;
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Sections communes */
+        .section {
+            padding: 4rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+
+
+/* Programmes */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.program-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+.program-img img{
+    width: 700%;
+    height: 200px;
+}
+
+
+.program-content {
+    padding: 1.5rem;
+}
+
+.program-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.program-content p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+      
+
+
+        /* Actualités */
+        .section-news {
+    background-color: #def1e4;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.news-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+.news-img img{
+    width: 300%;
+    height: 220px;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.news-content h3 {
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+}
+        
+
+
+/* A propos */
+.news-section {
+    background-color: #eef2f7;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.news-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+.news-img img{
+    width: 100%;
+    height: 200px;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.news-content h3 {
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+}
+.news-content a{
+    color: #e68a00;
+}
+
+
+
+/* Statistiques */
+.stats-section {
+    background: linear-gradient(rgba(6, 228, 172, 0.9), rgba(4,9,30,0.7)), url('image/rdc.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            padding: 1.5rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+
+/* Espace étudiant */
+        .login-container {
+            background-color: rgb(218, 245, 239);
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .login-container h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .login-container button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .login-container button:hover {
+            background-color: #0d3a5c;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .dashboard-menu {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+        }
+        
+        .dashboard-menu h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .dashboard-menu ul {
+            list-style: none;
+        }
+        
+        .dashboard-menu li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .dashboard-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        
+        .dashboard-menu a:hover, .dashboard-menu a.active {
+            background-color: rgba(26, 79, 114, 0.1);
+            color: var(--primary);
+        }
+        
+        .dashboard-content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+
+
+        /* Footer */
+        .footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-col h3 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    margin-right: 1rem;
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #bbb;
+}
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background-color: var(--primary);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 4rem 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">       
+            <i class="fas fa-graduation-cap fa-2x"></i>
+            <h1>Université du Congo</h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#programs">Programmes</a></li>
+            <li><a href="#news">Actualités</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <button class="login-btn" id="loginBtn"><i class="fas fa-user"></i> Accès Etudiants</button>
+        
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Innover, Créee, Réussir</h2>
+        <p> "Former des bâtisseurs d'avenir, des soignants de vies et des créateurs du numériques, au service d'un monde durable, innovant et humain".</p>
+        <div class="cta-buttons">
+            <a href="#programs" class="btn btn-primary">Découvrir nos programmes</a>
+            <a href="#loginSection" class="btn btn-secondary">Accès étudiant</a>
+        </div>
+    </section>
+
+
+
+    <!-- Programmes Section -->
+    <section class="section" id="programs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Programmes Académiques</h2>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="image/laboinfo.jpg">
+                    </div>
+                    <div class="program-content">
+                        <h3>Informatique Appliqué</h3>
+                        <p>Former des professionnels capables de concevoir, developper et maintenir des solutions logicielles adaptées aux besoins actuels.</p>
+                        <a href="programme.html" class="btn btn-primary"> Plus d'infos</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="image/labomed.jpg">
+                    </div>
+                    <div class="program-content">
+                        <h3>Médecine</h3>
+                        <p>Former des professionnels de santé compétents, éthiques et humains pour promouvoir la prévention, le diagnostic et le traitement des maladies.</p>
+                        <a href="programme.html" class="btn btn-primary">Plus d'infos</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="image/atelierarchi.jpeg">
+                    </div>
+                    <div class="program-content">
+                        <h3>Architecture</h3>
+                        <p>Former des architectes créatifs, capables de concevoir des espaces durables, fonctionnels et esthétiques pour une architeture respectueuse.</p>
+                        <a href="programme.html" class="btn btn-primary">Plus d'infos</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Actualités Section -->
+    <section class="section news-section" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Actualités & Situations</h2>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="image/journée.jpg">                        
+                    </div>
+                    <div class="news-content">
+                        
+                        <span class="news-date">28 Septembre 2025</span>
+                        <h3>Journée d'orientation Académique</h3>
+                        <p>Venez decouvrir nos filières en Architecture, rencontrer nos enseignana, visiter et poser toutes vos questions avant l'inscription.</p>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="image/grade.jpg">
+                    
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">14 Octobre 2025</span>
+                        <h3>Cérémonie de collation des Grades</h3>
+                        <p> Participer à la cérémonie solennelle de collation des grades académiques, moment de célébration du travail et réussite de nos étudiants .</p>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="image/ouverture.jpeg">
+                        
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"> 03 Novembre 2025</span>
+                        <h3>Messe d'ouverture et Lancement de l'année Académique</h3>
+                        <p>Célébration d'une messe d'ouverture de l'année Académique 2025-2026, accueil de nouveaux étudiants et Discours d'ouverture par le Recteur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!-- A propos Section -->
+<section class="section section-news" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>A propos de nous</h2>
+        </div>
+        
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="image/accueil.png">
+                </div>
+                <div class="news-content">
+                    
+                    <h3>Université du Congo</h3>
+                    <p>L'Université du Congo est une Institution d'enseignement supérieur engagée à former des professionnels 
+                        compétents dans les domaines de la médecine, l'informatique et l'architecte.</p>
+                    <a href="propos.html" class="btn btn-secondary">Lire la suite</a>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="image/excellence.jpg">
+                </div>
+                <div class="news-content">
+                    <h3>Excellence Académique</h3>
+                    <p> A l'Université du Congo, l'excellence académique est au coeur de notre vision. Nous encourageons la rigueur, 
+                        l'innovation, et la recherche pour garantir la réussite de chaque étudiant</p>
+                    <a href="propos.html" class="btn btn-secondary">Lire la suite</a>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <div class="news-img">
+                    <img src="image/hospital.jpg">
+                </div>
+                <div class="news-content">
+                    <h3>Nos réalisations</h3>
+                    <p> Parmis ses réalisations notables, on compte la construction d'un hôpital universitaire moderne dédié à 
+                        la formation des futurs médecins et à la prise en charge de la communauté</p>
+                    <a href="propos.html" class="btn btn-secondary">Lire la suite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+<!-- Statistiques Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="studentsCount">0</div>
+                    <div class="stat-text">Étudiants</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="programsCount">0</div>
+                    <div class="stat-text">Facultés</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="teachersCount">0</div>
+                    <div class="stat-text">Personnels</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="yearsCount">0</div>
+                    <div class="stat-text">Années d'existance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Espace étudiant Section -->
+    <section class="section" id="loginSection">
+        <div class="container">
+            <div class="section-title">
+                <h2>Accè Etudiant</h2>
+                <p>Cette espace est destiné aux étudiants qui ont confirmés leur place à nos programmes Académiques.</p>
+            </div>
+            
+            <div class="login-container" id="loginForm">
+                <h3>Accédez à votre compte</h3>
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input type="text" id="username" placeholder="Entrez votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="Entrez votre mot de passe">
+                </div>
+                <button id="connectBtn">Vous avez un compte ? Se connecter</button>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <a href="#" style="color: var(--primary);">Mot de passe oublié ?</a>
+                </p>
+            </div>
+            
+            <div class="dashboard-grid" id="dashboard" style="display: none;">
+                <div class="dashboard-menu">
+                    <h3>Mon Espace</h3>
+                    <ul>
+                        <li><a href="#" class="active"><i class="fas fa-home"></i> Tableau de bord</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i>Liste des cours par filière</a></li>
+                        <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt" style="color: #fa0606;"></i>Déconnexion</a></li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-content">
+                    <h3>Tableau de Bord</h3>
+                    <p>Bienvenue dans votre espace étudiant, <strong id="studentName">Romain. K</strong>! Accès autorisé</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div style="background-color: #e3f2fd; padding: 1.5rem; border-radius: 8px;">
+                            <h4><i class="fas fa-book" style="color: var(--secondary);"></i> Cours</h4>
+                            <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">13</p>
+                        </div>
+                        
+                        <div style="background-color: #e8f5e9; padding: 1.5rem; border-radius: 8px;">
+                            <h4><i class="fas fa-tasks" style="color: var(--secondary);"></i> Travails</h4>
+                            <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">0</p>
+                        </div>
+                        
+                        <div style="background-color: #fff3e0; padding: 1.5rem; border-radius: 8px;">
+                            <h4><i class="fas fa-calendar" style="color: var(--secondary);"></i> Communiqués Académiques</h4>
+                            <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">0</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;"></div>
+                        <h4>Dernières Cotes</h4>
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                            <thead>
+                                <tr style="background-color: var(--primary); color: white;">
+                                    <th style="padding: 0.8rem; text-align: left;">Cours</th>
+                                    <th style="padding: 0.8rem; text-align: left;">Cotes</th>
+                                    <th style="padding: 0.8rem; text-align: left;">Date</th>
+                                    <th style="padding: 0.8rem; text-align: left;">Evaluation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 0.8rem;">Introduction à l'informatique</td>
+                                    <td style="padding: 0.8rem;">10/15</td>
+                                    <td style="padding: 0.8rem;">20/04/2025</td>
+                                    <td style="padding: 0.8rem;">Travail Dirigé</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 0.8rem;">Architecture des ordinateurs</td>
+                                    <td style="padding: 0.8rem;">14/20</td>
+                                    <td style="padding: 0.8rem;">12/05/2025</td>
+                                    <td style="padding: 0.8rem;">Travail Pratique</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">Langage de programmation</td>
+                                    <td style="padding: 0.8rem;">23/30</td>
+                                    <td style="padding: 0.8rem;">30/06/2023</td>
+                                    <td style="padding: 0.8rem;">Travail dirigé</td>
+                                </tr>
+                            </tbody>
+                            
+                            <thead>
+                                <tr style="background-color: rgb(12, 85, 73); color: white;">
+                                    <th style="padding: 0.8rem; text-align: left;">Intitulé</th>
+                                    <th style="padding: 0.8rem; text-align: left;">crédits</th>
+                                    <th style="padding: 0.8rem; text-align: left;">heure</th>
+                                    <th style="padding: 0.8rem; text-align: left;">enseignats</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center; color: #fc8805;">Horaire de cours L1 Informatique</td>
+                                    <td style="text-align: center; color: #fc8805;">Année Academique 2025-2026</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">Introduction à l'Informatique</td>
+                                    <td style="padding: 0.8rem;">4 C</td>
+                                    <td style="padding: 0.8rem;">45 h</td>
+                                    <td style="padding: 0.8rem;">CT. Roma</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">Langage de programmation</td>
+                                    <td style="padding: 0.8rem;">6 C</td>
+                                    <td style="padding: 0.8rem;">60 h</td>
+                                    <td style="padding: 0.8rem;">Ir. Landry</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">Mathématique pour Informaticien</td>
+                                    <td style="padding: 0.8rem;">5 C</td>
+                                    <td style="padding: 0.8rem;">50 h</td>
+                                    <td style="padding: 0.8rem;">Ass Didieur </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">Architecture des ordinateurs</td>
+                                    <td style="padding: 0.8rem;">3 C</td>
+                                    <td style="padding: 0.8rem;">30 h</td>
+                                    <td style="padding: 0.8rem;">Prof Romain</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">Comptabilité</td>
+                                    <td style="padding: 0.8rem;">3 C</td>
+                                    <td style="padding: 0.8rem;">20 h</td>
+                                    <td style="padding: 0.8rem;">CT. Janvier</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem;">English</td>
+                                    <td style="padding: 0.8rem;">5 C</td>
+                                    <td style="padding: 0.8rem;">72 h</td>
+                                    <td style="padding: 0.8rem;">Prof Grace</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+            </div>          
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Universite du Congo</h3>
+                <p>Former des bâtisseurs d'avenir, des soignants de vies et des créateurs du numériques, au service d'un monde durable, innovant et humain.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#programs">Programmes</a></li>
+                    <li><a href="#news">Actualités</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Programmes</h3>
+                <ul class="footer-links">
+                    <li><a href="programme.html">Informatique Appliqué</a></li>
+                    <li><a href="programme.html">Médecine</a></li>
+                    <li><a href="programme.html">Architecture</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Avenue des Ecoles, Quartier Mabanga-Sud, Ville de Goma, Nord-Kivu, RD Congo Kinshasa</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+243 906 461 468 ">+243 906 461 468</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:uivcongo2@gmail.com">uivcongo2@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Universite du Congo/ RDC. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        // Menu mobile
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.querySelector('i').classList.toggle('fa-bars');
+            mobileMenu.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Animation des statistiques
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+        
+        const animateCounter = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    const increment = target / speed;
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCount();
+            });
+        };
+        
+        // Définir les valeurs cibles
+        document.getElementById('studentsCount').setAttribute('data-target', '500');
+        document.getElementById('programsCount').setAttribute('data-target', '3');
+        document.getElementById('teachersCount').setAttribute('data-target', '30');
+        document.getElementById('yearsCount').setAttribute('data-target', '7');
+        
+        // Observer pour animer les compteurs lorsqu'ils deviennent visibles
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('.stats-section'));
+        
+        // Gestion de la connexion
+        const loginBtn = document.getElementById('loginBtn');
+        const connectBtn = document.getElementById('connectBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const loginForm = document.getElementById('loginForm');
+        const dashboard = document.getElementById('dashboard');
+        
+        loginBtn.addEventListener('click', () => {
+            document.getElementById('loginSection').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        connectBtn.addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username && password) {
+                // Simulation de connexion réussie
+                document.getElementById('studentName').textContent = username;
+                loginForm.style.display = 'none';
+                dashboard.style.display = 'grid';
+            } else {
+                alert('Veuillez entrer votre nom d\'utilisateur et mot de passe');
+            }
+        });
+        
+        logoutBtn.addEventListener('click', () => {
+            loginForm.style.display = 'block';
+            dashboard.style.display = 'none';
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        });
+        
+        // Navigation fluide
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fermer le menu mobile après un clic
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenu.querySelector('i').classList.add('fa-bars');
+                        mobileMenu.querySelector('i').classList.remove('fa-times');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
